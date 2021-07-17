@@ -43,7 +43,7 @@ window.addEventListener('DOMContentLoaded', async(e) => {
 });
 
 
-// -------------------------------  Login  ------------------------------------------------
+// -------------------------------  LOGIN  ------------------------------------------------
 
 
 function login() {
@@ -60,7 +60,6 @@ function login() {
 		});
 
 	loginForm.reset(); // reset form
-	;
 
 }
 
@@ -176,3 +175,22 @@ function btnsEvent() {
 		})
 	});
 }
+
+// --------------------------------------------- DOM FUNCTIONS -------------------------------------------------
+
+function showPassword() {
+
+	const password = document.getElementById("login-password"); // Get password field
+            
+    if (password.type === "password") {
+            
+        password.type = "text";
+            
+    } else {
+            
+        password.type = "password";
+            
+        }
+            
+}  
+
