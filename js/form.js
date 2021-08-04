@@ -35,7 +35,7 @@ function saveReg() {
 			amount,
 			description,
 		})
-		.then(() => { // Wait and create greetins message
+		.then(() => { // Wait and create a thanks message
 			greetings();
 		});
 

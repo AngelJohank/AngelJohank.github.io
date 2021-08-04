@@ -17,18 +17,17 @@ window.addEventListener('DOMContentLoaded', async(e) => {
 
 		if (user) {
 
-			console.log('Logued');
-
 			if (contentLoaded) {
-				console.log('NOPE');
-			} else {
-				console.log('Entre mi rey');
-				adminConstructor();
-			}
+					console.log('Esperando a que el contenido cargue');
+				} 
+			else {
+					console.log('Ingresando al panel de administración');
+					adminConstructor();
+				}
 
 		} else {
 
-			console.log('not logued');
+			console.log('No logueado');
 
 			loginForm.addEventListener('submit', async(e) => {
 
@@ -55,6 +54,7 @@ function login() {
 		.signInWithEmailAndPassword(user, password)
 		.then(userCredential => {
 			contentLoaded = true;
+			console.log('Ingresando al panel de administración');
 			adminConstructor();
 			loginModal.hide();
 		});
@@ -83,7 +83,7 @@ function adminConstructor() {
 
 	logout(); // Configure Logout function
 
-	// Delete crap html
+	// Delete html
 
 	document.getElementById('carouselSlide').remove();
 	document.getElementById('nosotros').remove();
@@ -98,6 +98,7 @@ function adminConstructor() {
 
 
 function logout() {
+
 	const logout = document.querySelector("#logout"); // Select logout button
 
 	logout.addEventListener("click", (e) => { // Add click event
@@ -107,7 +108,7 @@ function logout() {
 		auth // sign out
 			.signOut()
 			.then(() => {
-				console.log('Signed out');
+				console.log('se cerró la sesión');
 				location.reload();
 			});
 
@@ -192,5 +193,4 @@ function showPassword() {
             
         }
             
-}  
-
+}

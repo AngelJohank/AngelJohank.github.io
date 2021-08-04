@@ -59,6 +59,17 @@ p {
 	box-shadow: 5px 10px 10px grey;
 }
 
+#productos .card-list {
+	text-align: center;
+	margin: 10px auto;
+	box-shadow: 2px 2px 3px #b5b5b5;
+	padding: 0;
+}
+
+#productos .card-header {
+	font-weight: 500;
+}
+
 #productos card-body {
 	padding: 10px;
 }
