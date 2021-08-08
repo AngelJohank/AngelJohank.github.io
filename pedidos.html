@@ -3,7 +3,7 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="icon" href="https://bit.ly/2TDB5bp">
+      <link rel="icon" href="https://bit.ly/3wK0o9b">
       <title>Pedidos-El Dorado</title>
       <!-- Bootstrap & CSS -->
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" crossorigin="anonymous">
@@ -51,27 +51,22 @@
          </div>
          <!-- Tipo -->
          <div class="mb-3">
-            <label for="pedido" class="form-label">Tipo de pedido</label>
-            <select class="form-select" aria-label="Default select example" id="tipo">
+            <label for="tipo" class="form-label">Seleccione un tipo de pedido</label>
+            <select class="form-select" aria-label="Default select" id="tipo">
                <option value="Personalizados" selected>Personalizado</option>
                <option value="Postres">Postres</option>
-               <option value="Torta">Torta</option>
+               <option value="Torta">Pasteles</option>
             </select>
-         </div>
-         <!-- Cantidad -->
-         <div class="mb-3">
-            <label for="cantidad" class="form-label" min="0">Cantidad</label>
-            <input type="number" id="cantidad" class="form-control" min="1" max="30" required>
          </div>
          <!-- Fecha -->
          <div class="mb-3">
-            <label for="fecha" class="form-label" min="0">Fecha de envio</label>
+            <label for="fecha" class="form-label" min="0">Fecha para la cual necesita el envío</label>
             <input type="date" id="fecha" class="form-control" required>
          </div>
          <!-- Descripcion -->
          <div class="mb-3">
-            <label for="descripcion" class="form-label">Descripción específica del pedido</label>
-            <textarea class="description form-control" placeholder="detalle su pedido" id="task-description"></textarea>
+            <label for="task-descripcion" class="form-label">Descripción específica del pedido</label>
+            <textarea class="description form-control" placeholder="detalle su pedido ej: 1 pastel de tres leches con mi nombre" id="task-description"></textarea>
          </div>
          <!-- Btn enviar -->
          <button type="submit" class="btn btn-primary" id="btn-form">Enviar</button>
@@ -108,7 +103,6 @@
          };
          
          firebase.initializeApp(firebaseConfig); // Initialize Firebase
-         
       </script>
       <script type="text/javascript" src="js/form.js"></script>
    </body>

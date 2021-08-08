@@ -146,7 +146,6 @@ function Card(reg) {
 		    		whatsapp: ${reg.phone} <br>
 					correo: <a href="mailto:${reg.mail}" target="_blank">${reg.mail}</a> <br>
 					tipo: ${reg.type} <br>
-					cantidad: ${reg.amount} <br>
 					Para el: ${reg.date} <br>
 					descripción: ${reg.description} <br>
 				</p>

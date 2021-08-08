@@ -23,7 +23,6 @@ function saveReg() {
 	const phone = taskform['telefono'].value;
 	const type = taskform['tipo'].value;
 	const date = taskform['fecha'].value;
-	const amount = taskform['cantidad'].value;
 	const description = taskform['task-description'].value;
 
 	db.collection('registros').doc().set({ // Save data in 'registros'
@@ -32,7 +31,6 @@ function saveReg() {
 			phone,
 			type,
 			date,
-			amount,
 			description,
 		})
 		.then(() => { // Wait and create a thanks message
