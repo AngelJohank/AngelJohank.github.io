@@ -40,10 +40,16 @@ p {
 
 #nosotros {
 	margin: 30px;
+	border: none;
+}
+
+#nosotros img{
+	border-radius: 100px;
 }
 
 #nosotros .card-body {
-	padding: 17%;
+	padding: 12%;
+	margin: auto;
 }
 
 /* Productos */
@@ -64,6 +70,7 @@ p {
 	margin: 20px auto;
 	box-shadow: 2px 2px 3px #b5b5b5;
 	padding: 0;
+	width: 100% !important;
 }
 
 #productos .card-header {
@@ -123,10 +130,13 @@ footer {
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 990px) {
 	#nosotros .card-body {
 		padding: 20px;
-	}	
+	}
+	#productos .card {
+		width: 35vw;
+	}
 	#map {
 		width: 90vw;
 	}
@@ -135,8 +145,11 @@ footer {
 	}
 }
 
-@media (max-width: 500px) {
-
+@media (max-width: 820px) {
+	
+	#productos .card {
+		width: 70vw;
+	}
 	.carousel-texto { 
 		margin: 50% auto;
 	}
