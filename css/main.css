@@ -59,6 +59,7 @@ p {
 }
 
 #productos .card {
+	cursor: pointer;
 	margin: 30px auto;
 	border-radius: 10px;
 	width: 350px;
