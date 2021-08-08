@@ -48,7 +48,7 @@ p {
 }
 
 #nosotros .card-body {
-	padding: 12%;
+	padding: 17%;
 	margin: auto;
 }
 
@@ -127,6 +127,10 @@ footer {
 
 	.carousel-texto { 
 		margin: 35	% auto;
+	}
+	#nosotros .card-body {
+		padding: 12%;
+		margin: auto;
 	}
 }
 
