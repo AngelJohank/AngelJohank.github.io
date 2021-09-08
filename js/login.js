@@ -128,6 +128,7 @@ function getRegs() {
 
 			Card(reg); // Inner Reg-cards
 			btnsEvent(); // Btns events
+			alert(reg);
 
 		});
 	});
@@ -152,6 +153,14 @@ function Card(reg) {
 		    <button class="btn btn-primary btn-delete bg-danger" data-id="${reg.id}">Eliminar</button>
 		    <button class="btn btn-primary btn-contact bg-success" data-id="${reg.phone}">Contactar</button>
 			</div>
+		</div>`;
+}
+
+func alert(reg) {
+	regContainer.innerHTML += `
+		<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  			<strong>¡Nueva petición entrante! cliente: ${reg.name}</strong>
+  			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 		</div>`;
 }
 
