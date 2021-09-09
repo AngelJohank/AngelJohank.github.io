@@ -3,12 +3,14 @@ const loginModal = new bootstrap.Modal(document.getElementById('login-modal')); 
 const loginForm = document.querySelector('#login-form'); // Login Form
 const nav = document.getElementById('navTog') // Navbar control
 var contentLoaded = false;
+var alertCounter = 0;
 
 // Firebase
 
 const onGetReg = (callback) => db.collection('registros').onSnapshot(callback); // Get data and Changes;
 const deleteReg = (id) => db.collection("registros").doc(id).delete(); // Delete Reg
 const regContainer = document.getElementById('reg-container'); // Reg-Container
+const messageContainer = document.getElementById('msg-container');
 
 
 window.addEventListener('DOMContentLoaded', async(e) => {
@@ -119,6 +121,18 @@ function getRegs() {
 
 	onGetReg((querySnapshot) => { // Fill regContainer
 
+		alertCounter++;
+
+		querySnapshot.docChanges().forEach((change) => {
+
+			if (change.type === "added") {
+				var reg = change.doc.data()
+				if (alertCounter > 1) {
+					alertCard(reg)
+				}
+			}
+    	});
+
 		regContainer.innerHTML = '<h1 class="text-center" style="margin: 50px;">Administrar pedidos</h1>'; // Add a title
 
 		querySnapshot.forEach(doc => { // Generate an HTML card
@@ -128,8 +142,6 @@ function getRegs() {
 
 			Card(reg); // Inner Reg-cards
 			btnsEvent(); // Btns events
-			alert(reg);
-
 		});
 	});
 }
@@ -156,10 +168,11 @@ function Card(reg) {
 		</div>`;
 }
 
-func alert(reg) {
-	regContainer.innerHTML += `
+function alertCard(reg) {
+	messageContainer.innerHTML = '';
+	messageContainer.innerHTML += `
 		<div class="alert alert-warning alert-dismissible fade show" role="alert">
-  			<strong>¡Nueva petición entrante! cliente: ${reg.name}</strong>
+  			<strong>¡Nueva petición entrante!</strong> cliente: ${reg.name}
   			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 		</div>`;
 }
