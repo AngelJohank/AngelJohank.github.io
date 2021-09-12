@@ -1,0 +1,161 @@
+/* Modal */
+
+#login-modal input {
+	margin-bottom: 20px;
+}
+
+.form-control:focus{
+	border-color: #cccccc;
+  box-shadow: 0px 5px 0px 0px #11f74f;
+}
+
+p {
+	margin: 4px;
+}
+
+/* Carousel */
+
+.carousel-texto { 
+	position: absolute;
+	margin: 17% auto;
+	width: 100%;
+	z-index: 2;
+	text-align: center;
+	color: white;
+	font-size: 50px;
+}
+
+.carousel-item {
+  height: 600px;
+}
+
+.carousel-img {
+    position: absolute;
+    min-height: 0px;
+    filter: contrast(90%);
+		filter: brightness(0.7);
+}
+
+/* Nosotros */
+
+#nosotros {
+	margin: 30px;
+	border: none;
+}
+
+#nosotros img{
+	border-radius: 100px;
+}
+
+#nosotros .card-body {
+	padding: 17%;
+	margin: auto;
+}
+
+/* Productos */
+
+#productos h2 {
+	margin-top: 30px;
+}
+
+#productos .card {
+	cursor: pointer;
+	margin: 30px auto;
+	border-radius: 10px;
+	width: 350px;
+	box-shadow: 5px 10px 10px grey;
+}
+
+#productos .card-list {
+	text-align: center;
+	margin: 20px auto;
+	box-shadow: 2px 2px 3px #b5b5b5;
+	padding: 0;
+	width: 100% !important;
+}
+
+#productos .card-header {
+	font-weight: 500;
+}
+
+#productos card-body {
+	padding: 10px;
+}
+
+#productos a {
+	width: 100%;
+
+}
+
+#productos a:hover {
+	transform: scale(1.04);
+}
+
+/* Ubicanos */
+
+#ubicanos h2 {
+	margin: 40px auto 80px;
+}
+
+#map {
+	width: 70vw;
+	margin: 0 auto 80px;
+}
+
+/* Regs */
+
+.card-reg {
+	margin: 30px auto;
+	width: 80%;
+	border: 2px solid grey;
+	/*box-shadow: none;*/
+}
+
+.btn {
+	border: none;
+}
+
+/* Footer */
+
+footer {
+	border-top: none;
+	text-align: center;
+}
+
+/* Screen */
+
+@media (max-width: 1100px) {
+
+	.carousel-texto { 
+		margin: 35	% auto;
+	}
+	#nosotros .card-body {
+		padding: 12%;
+		margin: auto;
+	}
+}
+
+@media (max-width: 990px) {
+	#nosotros .card-body {
+		padding: 20px;
+	}
+	#productos .card {
+		width: 35vw;
+	}
+	#map {
+		width: 90vw;
+	}
+	.carousel-texto { 
+		margin: 30% auto;
+	}
+}
+
+@media (max-width: 820px) {
+	
+	#productos .card {
+		width: 70vw;
+	}
+	.carousel-texto { 
+		margin: 50% auto;
+	}
+}
